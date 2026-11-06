@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доска публикаций</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <header class="page-header">
+            <h1>Доска публикаций</h1>
+            <p>Загружайте публикации и создавайте свои записи.</p>
+        </header>
+
+        <section class="panel">
+            <div class="section-heading">
+                <div>
+                    <h2>Все публикации</h2>
+                    <p class="subtitle">Публикации загружаются с сервиса JSONPlaceholder.</p>
+                </div>
+
+                <button type="button" id="loadButton" class="primary-button">
+                    Загрузить публикации
+                </button>
+            </div>
+
+            <div id="postsList" class="posts-list"></div>
+
+            <p id="emptyMessage" class="empty-message">
+                Нажмите «Загрузить публикации», чтобы увидеть записи.
+            </p>
+        </section>
+
+        <section class="panel">
+            <h2>Создать публикацию</h2>
+
+            <form id="postForm">
+                <label for="postTitle">Заголовок</label>
+                <input
+                    type="text"
+                    id="postTitle"
+                    placeholder="Введите заголовок публикации"
+                    required
+                >
+
+                <label for="postBody">Текст</label>
+                <textarea
+                    id="postBody"
+                    rows="5"
+                    placeholder="Введите текст публикации"
+                    required
+                ></textarea>
+
+                <button type="submit" id="createButton" class="primary-button">
+                    Создать публикацию
+                </button>
+            </form>
+        </section>
+
+        <section class="message-panel">
+            <h2>Сообщения</h2>
+            <p id="message" class="message" aria-live="polite">
+                Здесь будут отображаться результаты работы приложения.
+            </p>
+        </section>
+
+        <footer>
+            Приложение использует JSONPlaceholder для работы с публикациями.
+        </footer>
+    </main>
+</body>
+</html>
